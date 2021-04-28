@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
       
     }
     else{
-      alert("FILL ALL FIELDS");
+      alert("Por favor, complete los campos obligatorios");
     }
     
   }

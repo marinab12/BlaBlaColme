@@ -9,6 +9,23 @@
     margin-top: 12px;
 }
 
+.box1{
+    align-items: center;
+    justify-content: center;
+    width: 600px;  
+    margin-top: 100px;  
+}
+
+.Descartar img{
+    width: 30px;
+}
+
+.Descartar{
+    background-color: rgb(223, 223, 223);
+    border: none;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.70);
+}
+
 .body{
     display: flex;
     justify-content: center;
@@ -29,24 +46,24 @@
 }
 
 mat-icon{
-    color: rgb(243, 196, 67);
+    color: rgb(255, 179, 66);
 }
 
 .box{
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 20px;
     width: 600px;
     height: 500px;
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.70);
     
 }
 
 .usuario{
     width: 100%;
     display: inline-block;
-    background-color: rgba(224, 222, 222, 0.514);
-    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color: rgba(164, 210, 236, 0.514);
+    
 }
 
 .nombre{
@@ -132,15 +149,14 @@ mat-form-field{
 input{
     width: 80%;
     margin-left:30px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     margin-top: 10px;
 }
 
 .input-group{
     display: flex;
     width: 100%;
-    border-top: 1px solid rgb(0, 0, 0);
-    margin-top: 288px;
+    border-top: 1px solid rgb(99, 99, 99);
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -151,4 +167,9 @@ input{
 	border: none;
 	background-color: transparent;
     cursor: pointer;
+}
+
+.mensajes{
+    height: 345px;
+    overflow: scroll;
 }

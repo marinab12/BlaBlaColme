@@ -19,13 +19,17 @@
     #barra-lateral_responsive{
         order: 2;
         width: 100%;
-        margin-top: 10px;;
+        margin-top: 10px;
+        height: 230px;
+        overflow: scroll;
     }
 
     #cuerpo_responsive{
         width: 100%;
         margin-left: 0px;
         margin-top: 5px;
+        height: 400px;
+        overflow: scroll;
     }
 
     .chat{
@@ -48,13 +52,26 @@
 
 .cabecera{
     display: flex;
+    margin-right: 20px;
+}
+
+.usuario{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 15px; 
+}
+
+.logo{
+    width: 82%;
 }
 
 #logo{
-    position: absolute;
-    width: 230px;
+    display: flex;
+    height: 50px;
     margin-left: 3%;
     margin-top: 12px;
+    margin-right: 65%;
 }
 
 .cabecera button{
@@ -63,8 +80,6 @@
 
 #profile{
     width: 110px;
-    margin-left: 86%;
-    margin-top: 15px;
 }
 
 .center{
@@ -80,6 +95,8 @@
 	background-color:rgba(248, 251, 252, 0.94);
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.70);
     text-align: left;
+    height: 600px;
+    overflow: scroll;
 }
 .barra-lateral p{
     margin-left: 20px;
@@ -94,8 +111,11 @@
 	margin-left: 20px;
 	margin-right: 5px;
 	align-items: center;
-	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    height: 600px;
+    overflow: scroll;
 }
+
 
 .arriba{
     display: flex;
@@ -105,7 +125,6 @@
 
 .boton{
     display: flex;
-    justify-content: right;
     margin-left: 15%;
     margin-right: 20px;
 }
@@ -115,6 +134,7 @@
     margin-top: 5px;
     margin-left: 10px;
 }
+
 
 .header{
     background-color: rgba(192, 208, 229, 0.97);

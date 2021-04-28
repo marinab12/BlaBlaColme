@@ -27,13 +27,13 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/pagina-principal', this.username]);
           }
           else{
-            alert("WRONG PASSWORD");
+            alert("Contraseña incorrecta");
             
           }
           
         }
         else{
-          alert("USERNAME NOT REGISTERED");
+          alert("Usuario no registrado");
         }
       }
        
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
      }
      else{
        
-       alert("FILL ALL FIELDS");
+       alert("Por favor, complete los campos obligatorios");
      }
 
 }

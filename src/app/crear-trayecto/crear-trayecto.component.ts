@@ -45,7 +45,7 @@ disableSelect = new FormControl(false);
       this.backClicked();
     }
     else{
-      alert("FILL ALL FIELDS");
+      alert("Por favor, complete los campos obligatorios");
     }
 
   }

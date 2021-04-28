@@ -1,15 +1,17 @@
  <!-- Cabecera pagina-->
  <div class="cabecera">
+   <div class="logo">
   <img src="./assets/logo.png" id="logo" alt="Logo" />
-
+    </div>
   <!-- Boton perfil-->
+  <div align="right" class="usuario">
     <h3>{{this.username}}</h3>
     <button id="profile" mat-button [matMenuTriggerFor]="menu"><img src="./assets/user-circle.svg"  alt="Profile"/></button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Editar perfil</button>
         <button mat-menu-item [routerLink]="['/login']">Cerrar sesión</button>
       </mat-menu>
-
+  </div>
 </div>
 
 <div class = "center" id="center_responsive">
@@ -66,7 +68,7 @@
                     <td class="plazas">{{trayecto.plazas}}</td>
                     <td class="desvio">{{trayecto.desvio}}</td>
                     <td class="chat"> <button matTooltip="Click para chatear" class="chatear" [routerLink]="['/chat', trayecto.id]"><mat-icon>chat</mat-icon></button></td>
-                    <td class="viajar"><button matTooltip="Click para unirse a la ruta" mat-raised-button color="primary" (click)="openSnackBar('Solicitud enviada!','Undo')">¡Viajar juntos!</button></td>
+                    <td class="viajar"><button matTooltip="Click para unirse a la ruta" mat-raised-button color="primary" (click)="openSnackBar('Solicitud enviada!','Undo')">¡Unirse!</button></td>
                     <td class="info_responsive"><button matTooltip="Click para más información" mat-raised-button color="primary">+ Info</button></td>
           
                 </tr>
