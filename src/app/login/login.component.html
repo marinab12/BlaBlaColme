@@ -21,13 +21,13 @@
     <p>
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input required matInput [type]="hide ? 'password' : 'text'">
+        <input [(ngModel)]= "password" required matInput [type]="hide ? 'password' : 'text'">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
     </p>
-    <button mat-raised-button color="primary" [routerLink]="['/pagina-principal']" > Iniciar Sesión </button>
+    <button mat-raised-button color="primary" (click) = "iniciarSesion()" > Iniciar Sesión </button>
     <p>¿No eres miembro todavía? <a [routerLink]="['/register']"> Regístrate!</a></p>
 
   </mat-expansion-panel>

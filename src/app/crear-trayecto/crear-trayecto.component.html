@@ -54,7 +54,7 @@
 
     <div class="botones">
       <button mat-raised-button class="Descartar" [routerLink]="['/pagina-principal']"> Descartar</button>
-      <button class="Crear" [disabled]="!disableSelect.value"  mat-raised-button color="primary" [routerLink]="['/pagina-principal']" (click) = 'saveNuevoTrayecto()' disabled> Crear </button>
+      <button class="Crear" [disabled]="!disableSelect.value"  mat-raised-button color="primary" (click) = 'saveNuevoTrayecto()' disabled> Crear </button>
     </div>
     
   </mat-expansion-panel>

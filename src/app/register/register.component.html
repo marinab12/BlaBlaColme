@@ -27,7 +27,7 @@
     <p>
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input required matInput [type]="hide ? 'password' : 'text'">
+        <input [(ngModel)]= "password" required matInput [type]="hide ? 'password' : 'text'">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
@@ -50,7 +50,7 @@
 
     <div class="botones">
       <button mat-raised-button class="Descartar"  [routerLink]="['/login']"> Descartar </button>
-      <button  mat-raised-button class="Resgistrarse" color="primary" [routerLink]="['/pagina-principal']" (click) = 'saveNuevoPerfil()' > Registrarse </button>
+      <button  mat-raised-button class="Resgistrarse" color="primary"  (click) = 'saveNuevoPerfil()' > Registrarse </button>
     </div>
 
 

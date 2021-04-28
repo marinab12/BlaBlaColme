@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../global.service';
 import { Trayecto } from '../Trayecto';
 import { FormControl} from '@angular/forms';
-import { Time } from "@angular/common";
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -30,14 +30,22 @@ export class CrearTrayectoComponent implements OnInit {
 //Para condiciones
 disableSelect = new FormControl(false);
 
-  constructor(public gs: GlobalService) {
+  constructor(public gs: GlobalService, private router: Router) {
 
   }
 
+ 
+
   public saveNuevoTrayecto(){
-    var trayecto1 = new Trayecto (this.id, this.name_creator, this.origen, this.lugares_cercanos,this.hora_llegada, this.plazas,  this.desvio);
-    this.gs.añadirTrayecto(trayecto1);
-    this.id ++;
+    if (this.name_creator!="" && this.origen != "" && this.hora_llegada != "" && this.plazas != 0 && this.desvio!= "") {
+      var trayecto1 = new Trayecto (this.id, this.name_creator, this.origen, this.lugares_cercanos,this.hora_llegada, this.plazas,  this.desvio);
+      this.gs.añadirTrayecto(trayecto1);
+      this.id ++;
+      this.router.navigate(['/pagina-principal']);
+    }
+    else{
+      alert("FILL ALL FIELDS");
+    }
 
   }
 

@@ -3,7 +3,7 @@
   <img src="./assets/logo.png" id="logo" alt="Logo" />
 
   <!-- Boton perfil-->
-    <!--<button mat-raised-button color="primary" [routerLink]="['/pagina-principal']"> Perfil </button>-->
+    <h3>{{this.username}}</h3>
     <button id="profile" mat-button [matMenuTriggerFor]="menu"><img src="./assets/user-circle.svg"  alt="Profile"/></button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Editar perfil</button>

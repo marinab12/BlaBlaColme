@@ -2,6 +2,8 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { GlobalService} from '../global.service';
 import { Trayecto } from '../Trayecto';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { ActivatedRoute } from '@angular/router';
+import { User } from '../User';
 
 
 
@@ -18,6 +20,9 @@ export class PaginaPrincipalComponent implements OnInit {
   public opcion = "";
   public filtrados: Trayecto[] = [];
   public enLista : Boolean = false;
+  public username = "String";
+
+  
 
   public getFiltro(){
 
@@ -57,7 +62,12 @@ export class PaginaPrincipalComponent implements OnInit {
     });
   }
 
-  constructor(public gs: GlobalService, public snackBar: MatSnackBar) { }
+  
+
+  constructor(public gs: GlobalService, public snackBar: MatSnackBar, route: ActivatedRoute) {
+    this.username = route.snapshot.params.id.toLocaleUpperCase();
+    
+   }
 
   ngOnInit(): void {
   }

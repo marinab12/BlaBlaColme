@@ -11,7 +11,8 @@ import { RegisterComponent} from './register/register.component'
 const routes: Routes = [
 
 
-  {path:'', redirectTo:'/pagina-principal', pathMatch:'full'},
+  {path:'', redirectTo:'/login', pathMatch:'full'},
+  {path:'pagina-principal/:id', component: PaginaPrincipalComponent},
   {path:'pagina-principal', component: PaginaPrincipalComponent},
   {path:'crear-trayecto', component: CrearTrayectoComponent},
   {path:'chat/:id', component: ChatComponent},
