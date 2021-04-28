@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GlobalService} from '../global.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-chat',
@@ -22,7 +23,7 @@ export class ChatComponent implements OnInit {
     });
   }
 
-  constructor(route: ActivatedRoute, public gs: GlobalService, public snackBar: MatSnackBar) {
+  constructor(route: ActivatedRoute, public gs: GlobalService, public snackBar: MatSnackBar, private _location: Location) {
     this.id_creator = route.snapshot.params.id;
     this.name_creator= gs.getInfoTrayecto(this.id_creator).creator;
   }
@@ -33,6 +34,9 @@ export class ChatComponent implements OnInit {
     this.mensaje_enviado.push(this.mensaje);
     this.mensaje = "";
 
+  }
+  backClicked() {
+    this._location.back();
   }
 
 }

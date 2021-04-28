@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
       this.snackBar.open("Usuario registrado", "Undo", {
         duration: 2000,
       });
-      this.router.navigate(['/pagina-principal']);
+      this.router.navigate(['/pagina-principal',this.username]);
       
     }
     else{
