@@ -1,0 +1,64 @@
+ <!-- Cabecera pagina-->
+ <div class="cabecera">
+  <img src="./assets/logo.png" id="logo" alt="Logo" />
+
+</div>
+
+<div class='box'>
+  <mat-expansion-panel expanded="true" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        Crea un trayecto!
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>
+      <mat-form-field>
+        <mat-label>Origen</mat-label>
+        <input matInput [(ngModel)]= "origen"  required>
+      </mat-form-field>
+    </p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Puntos clave del trayecto</mat-label>
+    <mat-select   multiple [(ngModel)]= "lugares_cercanos" required>
+      <mat-option *ngFor="let topping of suggestions" [value]="topping" ngDefaultControl   >{{topping}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+    <p>
+      <mat-form-field>
+        <mat-label>Hora de llegada</mat-label>
+        <input matInput  type="time" [(ngModel)] = "hora_llegada" min="09:00" max="21:00" required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Plazas disponibles</mat-label>
+        <input matInput type="number" [(ngModel)]= "plazas" min="1" max="7" required>
+        <span matSuffix>plazas</span>
+      </mat-form-field>
+    </p>
+
+    <div>
+      <label>¿Te desviarías? </label>
+      <mat-radio-group [(ngModel)]= "desvio">
+        <mat-radio-button class="Seleccion" value="Si">Sí</mat-radio-button>
+        <mat-radio-button class="Seleccion" value="No">No</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <p>
+      <mat-checkbox [formControl]="disableSelect" >Aceptas las condiciones de BlaBlaColme</mat-checkbox>
+    </p>
+
+    <div class="botones">
+      <button mat-raised-button class="Descartar" [routerLink]="['/pagina-principal']"> Descartar</button>
+      <button class="Crear" [disabled]="!disableSelect.value"  mat-raised-button color="primary" [routerLink]="['/pagina-principal']" (click) = 'saveNuevoTrayecto()' disabled> Crear </button>
+    </div>
+    
+  </mat-expansion-panel>
+
+
+
+</div>

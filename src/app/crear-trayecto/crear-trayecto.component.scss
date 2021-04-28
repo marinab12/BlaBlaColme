@@ -1,0 +1,59 @@
+@media only screen and (min-width: 891px){
+
+    mat-expansion-panel{
+        width: 400px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 890px){
+
+    mat-expansion-panel{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+.cabecera{
+    display: flex;
+}
+
+#logo{
+    width: 230px;
+    margin-left: 3%;
+    margin-top: 12px;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+mat-form-field{
+    width: 300px;
+}
+
+.mat-expansion-panel-header-title{
+    align-items: center;
+    justify-content: center;
+}
+
+.Seleccion{
+    margin-left: 10px;
+}
+
+.Crear{
+    margin-left: 30px;
+}
+
+.Descartar{
+    background-color: rgb(224, 224, 224);
+}
+
+.title{
+    font-weight: bold;   
+}

@@ -1,0 +1,97 @@
+
+$primary-color:rgb(233, 227, 224);
+$border-color:rgb(228, 213, 213);
+$text-color:rgb(0, 0, 0);
+
+$tipoletra: Arial, "Times New Roman", Times, serif;
+$estiloletra:bold;
+$tamletra: 15px;
+$margen: 20px 20px;
+$fondo: rgb(230, 229, 229);
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+	border-radius: $radius;
+}
+.elemento{
+	background-color:$primary-color;
+	border-color: $border-color;
+	border-style: solid;
+	border-width: 2px;
+	padding-top: 10px;
+	font-family: $tipoletra;
+	font-size:$tamletra;
+}
+
+.email, .nombre{
+	width: 300px;
+}
+
+.lapiz{
+	color: rgb(43, 99, 184);
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.papelera{
+	color: rgb(236, 82, 82);
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.icono{
+	margin-right: 50px;
+	color: rgb(33, 106, 216);
+}
+
+.menu{
+	margin-right: 1000px;
+}
+
+.mover{
+	margin-right: 610px;
+}
+.opciones{
+	align-items: right;
+	width: 40%;
+}
+
+h1{
+	text-align: right;
+}
+h2{
+	text-align: center;
+}
+input{
+	margin-left: 150px;
+	margin-bottom: 30px;
+	width: 300px;
+	border-top: unset;
+	border-left: unset;
+	border-right: unset;
+}
+.box{
+	@extend .elemento;
+	@include border-radius(10px);
+	width:80%;
+	height:auto;
+	margin: auto;
+}
+table {
+  width: 90%;
+}
+
+th{
+	font-weight: $estiloletra;
+	padding-top: 10px;
+	padding-bottom: 30px;	
+}
+
+td{
+	text-align: center;
+	overflow: visible;
+	padding-bottom: 20px;	
+}

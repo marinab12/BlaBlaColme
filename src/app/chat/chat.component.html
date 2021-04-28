@@ -1,0 +1,51 @@
+ <!-- Cabecera pagina-->
+ <div class="cabecera">
+  <img src="./assets/logo.png" id="logo" alt="Logo" />
+
+</div>
+
+<div class = "body">
+<!-- FOTO PERFIL -->
+<div class = "box">
+  <div class="usuario">
+    <div class="user-img">
+      <img src="./assets/profile.jpg" alt="image">
+    </div>
+    <div class="nombre">
+    <!-- NOMBRE DEL USUARIO CON EL QUE HABLAS -->
+    <h2>{{this.name_creator}}
+    <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+    </h2>
+  </div>
+    <div class="boton">
+      <!-- BOTON VIAJAR JUNTOS -->
+      <button mat-raised-button color="primary" (click)="openSnackBar('Solicitud enviada!','Undo')"> ¡Viajar juntos! </button>
+    </div>
+
+  </div>
+  <div class="mensajes">
+  <!-- MENSAJES -->
+  <!-- El del otro usuario vacio-->
+    <div class="recived-msg">
+      <div class="recived-msg-inbox">
+          <p>Hola!</p>
+          <span class="time">{{today| date:'shortTime'}}</span>
+      </div>
+    </div>
+
+  <!-- El del propio usuario que tendra el mensaje que envie-->
+  <div class="sent-msg">             
+    <div class="sent-msg-inbox" *ngFor='let mensaje of mensaje_enviado; let i=index'>
+      <p *ngIf='mensaje_enviado[i]!=""'>{{mensaje_enviado[i]}}</p>
+      <span *ngIf='mensaje_enviado[i]!=""' class="time1">{{today| date:'shortTime'}}</span>
+    </div>
+  </div>
+</div>
+  <!-- ESCRIBIR MENSAJE: RODEARLO CON UN CUADRADO -->
+    <div class="input-group">
+      <input type="text" placeholder="Escribe aquí" [(ngModel)]='mensaje' >
+      <button class="enviar" (click)="enviarMensaje()"> <mat-icon class="enviar-icon">send</mat-icon> </button>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,81 @@
+ <!-- Cabecera pagina-->
+ <div class="cabecera">
+  <img src="./assets/logo.png" id="logo" alt="Logo" />
+
+  <!-- Boton perfil-->
+    <!--<button mat-raised-button color="primary" [routerLink]="['/pagina-principal']"> Perfil </button>-->
+    <button id="profile" mat-button [matMenuTriggerFor]="menu"><img src="./assets/user-circle.svg"  alt="Profile"/></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Editar perfil</button>
+        <button mat-menu-item [routerLink]="['/login']">Cerrar sesión</button>
+      </mat-menu>
+
+</div>
+
+<div class = "center" id="center_responsive">
+  <div class="barra-lateral" id="barra-lateral_responsive">
+    
+    <h4> Normas BlaBlaColme </h4>
+    <p>- Se puntual: nadie quiere llegar tarde a clase</p>
+    <p>- Cancelaciones: No se puede cancelar reserva 10 horas antes</p>
+    <p>- Covid-19: No olvides la mascarilla y mantener distancia de seguridad</p>
+    <p>- Respeto: hacia otros usuarios y sus vehículos</p>
+  </div>
+
+  <div class="cuerpo" id="cuerpo_responsive">
+  <div class="arriba">
+    <!--Buscador -->
+    <mat-form-field class="buscador" >
+      <mat-label>Buscar por origen o puntos de trayecto...</mat-label> 
+      <input matInput [(ngModel)]="filtro"/>
+    </mat-form-field>
+
+    <mat-icon class='mover'>search</mat-icon>
+    
+
+    <!-- Boton crear trayecto-->
+    <div class="boton">
+      <button matTooltip="Crear ruta" mat-mini-fab color="primary" [routerLink]="['/crear-trayecto']"> + </button>
+    </div>
+ </div>
+
+  <mat-drawer-container class="example-container">
+    <mat-drawer-content>
+            <!-- Lista de trayectos-->
+        <div class='box'>
+          <p-table [value]=getFiltro() NgStyle="max-width">
+            <ng-template pTemplate="header">
+                <tr class="header">
+                    <th class="origen">Origen</th>
+                    <th class="puntos">Puntos del trayecto</th>
+                    <th class="hora">Llegada</th>
+                    <th class="plazas">Plazas disponibles</th>
+                    <th class="desvio">¿Se desvía?</th>
+                    <th class="chat"></th>
+                    <th class="viajar"></th>
+                    <th class="info_responsive" style="width: 15%;"></th>
+
+                </tr>
+            </ng-template>
+            <ng-template class="alumno" pTemplate="body" let-trayecto  >
+              <!-- <tr *ngFor='let linea1 of contactos; let i=index'>-->
+                <tr >
+                    <td class="origen">{{trayecto.origen}}</td>
+                    <td class="puntos"><p *ngFor='let lugares of trayecto.lugares_cercanos; let i=index'>{{lugares}}</p></td>
+                    <td class="hora">{{trayecto.hora_llegada}}</td>
+                    <td class="plazas">{{trayecto.plazas}}</td>
+                    <td class="desvio">{{trayecto.desvio}}</td>
+                    <td class="chat"> <button matTooltip="Click para chatear" class="chatear" [routerLink]="['/chat', trayecto.id]"><mat-icon>chat</mat-icon></button></td>
+                    <td class="viajar"><button matTooltip="Click para unirse a la ruta" mat-raised-button color="primary" (click)="openSnackBar('Solicitud enviada!','Undo')">¡Viajar juntos!</button></td>
+                    <td class="info_responsive"><button matTooltip="Click para más información" mat-raised-button color="primary">+ Info</button></td>
+          
+                </tr>
+            
+            </ng-template>
+          </p-table>
+        </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+</div>
+

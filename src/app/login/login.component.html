@@ -1,0 +1,36 @@
+ <!-- Cabecera pagina-->
+ <div class="cabecera">
+  <img src="./assets/logo.png" id="logo" alt="Logo" />
+
+</div>
+
+
+<div class='box'>
+  <mat-expansion-panel expanded="true" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+       ¡Bienvenido!
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]= "username"  required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input required matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" [routerLink]="['/pagina-principal']" > Iniciar Sesión </button>
+    <p>¿No eres miembro todavía? <a [routerLink]="['/register']"> Regístrate!</a></p>
+
+  </mat-expansion-panel>
+
+
+</div>

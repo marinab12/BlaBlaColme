@@ -1,0 +1,79 @@
+<h2>
+  Contacto
+</h2>
+
+<div class='box'>
+  <mat-expansion-panel expanded="true" showToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Datos personales
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]= "nombre">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Teléfono</mat-label>
+        <input matInput  [(ngModel)] = "telefono">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput  [(ngModel)] = "email">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field >
+        <mat-label>Tipo</mat-label>
+        <mat-select  [(ngModel)] = "tipo">
+          <mat-option value="Personal">Personal</mat-option>
+          <mat-option value="Trabajo">Trabajo</mat-option>
+          <mat-option value="Compañero">Compañero</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-checkbox [(ngModel)] = "habitual" >Habitual</mat-checkbox>
+    </p>
+  </mat-expansion-panel>
+
+
+<mat-expansion-panel showToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Otros datos
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>
+    <mat-form-field>
+      <mat-label>Dirección</mat-label>
+      <input matInput [(ngModel)] = "direccion" >
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Empresa</mat-label>
+      <input matInput [(ngModel)] = "empresa" >
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Cargo</mat-label>
+      <input matInput [(ngModel)] = "cargo">
+    </mat-form-field>
+  </p>
+</mat-expansion-panel>
+
+<div class="botones">
+<button mat-raised-button color="primary" [routerLink]="['/Agenda']" (click) = 'saveCambios()' > Aceptar </button>
+<p class="space"></p>
+<button mat-raised-button color="primary" [routerLink]="['/Agenda']"> Cancelar </button>
+</div>
+
+</div>

@@ -1,0 +1,61 @@
+ <!-- Cabecera pagina-->
+ <div class="cabecera">
+  <img src="./assets/logo.png" id="logo" alt="Logo" />
+
+</div>
+
+
+<div class='box'>
+  <mat-expansion-panel expanded="true" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        ¡Regístrate!
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]= "username"  required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]= "email"  required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input required matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </p>
+    <p> Qué tipo de usuario eres?</p>
+          <mat-checkbox class="conductor" [formControl]="disableSelect" [(ngModel)] = "tipo_usuario_conductor" >Conductor</mat-checkbox>
+          <mat-checkbox [(ngModel)] = "tipo_usuario_pasajero" >Pasajero</mat-checkbox>
+
+    <p>
+
+
+    <p>
+      <mat-form-field>
+        <mat-label>¿Cuántos puntos del carnet tienes?</mat-label>
+        <input [disabled]="!disableSelect.value" matInput type="number" [(ngModel)]= "puntos_carnet" min="1" max="15" required>
+        <span matSuffix>puntos</span>
+      </mat-form-field>
+    </p>
+
+    <div class="botones">
+      <button mat-raised-button class="Descartar"  [routerLink]="['/login']"> Descartar </button>
+      <button  mat-raised-button class="Resgistrarse" color="primary" [routerLink]="['/pagina-principal']" (click) = 'saveNuevoPerfil()' > Registrarse </button>
+    </div>
+
+
+  </mat-expansion-panel>
+
+
+
+</div>

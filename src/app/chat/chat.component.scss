@@ -1,0 +1,154 @@
+.cabecera{
+    display: flex;
+}
+
+#logo{
+    position: absolute;
+    width: 230px;
+    margin-left: 3%;
+    margin-top: 12px;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.user-img{
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-right: 10px;
+    float: left;
+}
+
+.user-img img{
+    max-width: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+mat-icon{
+    color: rgb(243, 196, 67);
+}
+
+.box{
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    width: 600px;
+    height: 500px;
+    border: 1px solid rgb(0, 0, 0);
+    
+}
+
+.usuario{
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(224, 222, 222, 0.514);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.nombre{
+    width: 200px;
+    float: left;
+    margin-top: 12px;
+}
+
+.boton{
+    width: 120px;
+    float: right;
+    margin-top: 35px;
+    margin-right: 15px;
+}
+
+.recived-msg{
+    display: inline-block;
+    padding: 10px 0 0 40px;
+    vertical-align: top;
+    width: 92%;
+}
+.recived-msg-inbox{
+    width:57%;
+
+}
+.recived-msg-inbox p {
+    background: #FFEFD5 none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #646464;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 10px 5px 12px;
+    width: 100%;
+}
+
+.sent-msg{
+    float: left;
+    width: 65%;
+    margin-left: 35%;
+}
+
+.time1{
+    color: #646464;
+    font-size: 14px;
+    padding: 5px 10px 5px 5px;
+    width: 100%;
+    margin-left: 92%;
+}
+
+.sent-msg-inbox{
+  margin-right: 90px;
+  
+}
+
+.sent-msg-inbox p {
+    background: rgb(118, 183, 226) none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 10px 5px 12px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.time{
+    color: #646464;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 10px 5px 5px;
+    width: 100%;
+}
+
+.enviar-icon{
+    color: rgb(69, 38, 155);
+}
+
+mat-form-field{
+    width: 86%;
+    margin-left: 5%;
+}
+
+input{
+    width: 80%;
+    margin-left:30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input-group{
+    display: flex;
+    width: 100%;
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-top: 288px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.enviar{
+    color: rgb(69, 38, 155);
+	border: none;
+	background-color: transparent;
+    cursor: pointer;
+}

@@ -1,0 +1,157 @@
+/*Responsive media moviles (600px)*/
+
+@media only screen and (min-width: 891px){
+
+    .info_responsive{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 890px){
+
+    #center_responsive{
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #barra-lateral_responsive{
+        order: 2;
+        width: 100%;
+        margin-top: 10px;;
+    }
+
+    #cuerpo_responsive{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+
+    .chat{
+        display: none;
+    }
+
+    .viajar{
+        display: none;
+    }
+
+    .plazas{
+        display: none;
+    }
+
+    .desvio{
+        display: none;
+    }
+
+}
+
+.cabecera{
+    display: flex;
+}
+
+#logo{
+    position: absolute;
+    width: 230px;
+    margin-left: 3%;
+    margin-top: 12px;
+}
+
+.cabecera button{
+    align-items: right;
+}
+
+#profile{
+    width: 110px;
+    margin-left: 86%;
+    margin-top: 15px;
+}
+
+.center{
+    display: flex;
+    margin-left: 60px;
+    margin-top: 4%;
+}
+
+.barra-lateral{
+    width: 20%;
+	margin-right: 5px;
+	align-items: center;
+	background-color:rgba(248, 251, 252, 0.94);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.70);
+    text-align: left;
+}
+.barra-lateral p{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.barra-lateral h4{
+    text-align: center;
+}
+
+.cuerpo{
+    width: 70%;
+	margin-left: 20px;
+	margin-right: 5px;
+	align-items: center;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.arriba{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.boton{
+    display: flex;
+    justify-content: right;
+    margin-left: 15%;
+    margin-right: 20px;
+}
+
+.buscador{
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.header{
+    background-color: rgba(192, 208, 229, 0.97);
+    height: 70px;
+}
+
+td {
+    text-align: center;
+}
+
+.origen{
+	width:15%;
+}
+
+.puntos{
+	width:20%;
+}
+
+.hora{
+	width:15%;
+}
+
+.plazas{
+    width:15%;
+}
+
+.desvios{
+    width: 5%;
+}
+
+.viajar{
+	width: 15%;
+}
+
+.chatear{
+	color: rgb(69, 38, 155);
+	border: none;
+	background-color: transparent;
+    cursor: pointer;
+}
