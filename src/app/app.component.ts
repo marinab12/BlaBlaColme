@@ -11,7 +11,7 @@ import { Component, Injectable } from '@angular/core';
 @Injectable()
 
 export class AppComponent {
-
+  title='BlaBlaColme';
   constructor(){};
 
 }

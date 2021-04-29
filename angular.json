@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "micropractica4": {
+    "BlaBlaColme": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/micropractica4",
+            "outputPath": "dist/BlaBlaColme",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -53,13 +53,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "5mb"
                 }
               ]
             }
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "micropractica4:build"
+            "browserTarget": "BlaBlaColme:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "micropractica4:build:production"
+              "browserTarget": "BlaBlaColme:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "micropractica4:build"
+            "browserTarget": "BlaBlaColme:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "micropractica4:serve"
+            "devServerTarget": "BlaBlaColme:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "micropractica4:serve:production"
+              "devServerTarget": "BlaBlaColme:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "micropractica4"
+  "defaultProject": "BlaBlaColme"
 }
