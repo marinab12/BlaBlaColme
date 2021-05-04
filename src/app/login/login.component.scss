@@ -1,9 +1,17 @@
+@media only screen and (max-width: 890px){
+
+    #logo-responsive {
+        width: 28%;
+    }
+
+}
+
 .cabecera{
     display: flex;
 }
 
-#logo{
-    width: 230px;
+.logo{
+    width:250px;
     margin-left: 3%;
     margin-top: 12px;
 }

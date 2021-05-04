@@ -13,6 +13,10 @@
         width: 100%;
         text-align: center;
     }
+    #logo-responsive {
+        width: 28%;
+        text-emphasis: none;
+    }
 
 }
 
@@ -20,8 +24,8 @@
     display: flex;
 }
 
-#logo{
-    width: 230px;
+.logo{
+    width: 15%;
     margin-left: 3%;
     margin-top: 12px;
 }

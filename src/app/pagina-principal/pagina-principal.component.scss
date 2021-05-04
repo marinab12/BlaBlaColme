@@ -48,27 +48,34 @@
         display: none;
     }
 
+    #sitio-logo-responsive {
+        width: 80%;
+    }
+
+    #logo-responsive {
+        width: 200px;
+    }
+
 }
 
 .cabecera{
-    display: flex;
-    margin-right: 20px;
+    width: 94%;
 }
 
 .usuario{
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-top: 15px; 
+    justify-content: flex-end;
 }
 
 .logo{
-    width: 82%;
+    width: 200px;
+    margin-left: 3%;
+    margin-top: 12px;
 }
 
 #logo{
     display: flex;
-    height: 50px;
+    height: 50x;
     margin-left: 3%;
     margin-top: 12px;
     margin-right: 65%;
