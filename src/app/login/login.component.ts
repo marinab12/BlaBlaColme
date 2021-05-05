@@ -32,9 +32,9 @@ export class LoginComponent implements OnInit {
           }
           
         }
-        else{
+        /*else{
           alert("Usuario no registrado");
-        }
+        }*/
       }
        
        
