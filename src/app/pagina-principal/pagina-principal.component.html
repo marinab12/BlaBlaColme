@@ -1,10 +1,10 @@
  <!-- Cabecera pagina-->
  <div class="cabecera">
-  <img src="/assets/logo.png" class="logo" id="logo-responsive" alt="Logo" />
+  <img src="./assets/logo.png" class="logo" id="logo-responsive" alt="Logo" />
   <!-- Boton perfil-->
   <div align="right" class="usuario">
     <h3>{{this.username}}</h3>
-    <button id="profile" mat-button [matMenuTriggerFor]="menu"><img src="/assets/user-circle.svg"  alt="Profile"/></button>
+    <button id="profile" mat-button [matMenuTriggerFor]="menu"><img src="./assets/user-circle.svg"  alt="Profile"/></button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Editar perfil</button>
         <button mat-menu-item [routerLink]="['/login']">Cerrar sesión</button>
